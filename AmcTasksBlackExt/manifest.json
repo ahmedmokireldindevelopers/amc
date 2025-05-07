@@ -1,0 +1,65 @@
+{
+    "manifest_version": 3,
+    "name": "Black",
+    "version": "1.3",
+    "description": "Whatsapp, Telegram, Messenger Contact",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "nativeMessaging",
+        "storage",
+        "tabs",
+        "activeTab",
+        "declarativeContent",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://www.facebook.com/*",
+        "https://web.facebook.com/*",
+        "https://touch.facebook.com/*",
+        "https://www.amctasks.com/*"
+    ],
+    "icons": {
+        "16": "images/premium.png",
+        "32": "images/premium.png",
+        "48": "images/premium.png",
+        "128": "images/premium.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.facebook.com/*",
+                "https://web.facebook.com/*",
+                "https://www.amctasks.com/*",
+                "https://touch.facebook.com/*",
+                "https://www.amctasks.com/*",
+                "https://www.messenger.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/whatsapp-32.png",
+                "images/premium-32.png",
+                "images/premium.png",
+                "test2.png"
+            ],
+            "matches": [
+                "https://www.facebook.com/*",
+                "https://web.facebook.com/*",
+                "https://www.amctasks.com/*",
+                "https://amctasks.com/*",
+                "https://touch.facebook.com/*",
+                "https://www.messenger.com/*"
+            ]
+        }
+    ]
+}
