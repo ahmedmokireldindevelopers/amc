@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+  <div style="width: 500px; height: 600px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-1">
+          <h1>Extract Options</h1>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-12 mt-2" id="loginCard" style="display: none">
+          <div class="card">
+            <div class="card-header">
+              Login  <span id="group_header"> </span>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <button id="Login" class="btn btn-primary">Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2" id="groupCard" style="display: none">
+          <div class="card">
+            <div class="card-header">
+              Group  <span id="group_header"> </span>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <div class="form-group">
+                    <label>Delay</label>
+                    <input type="number" class="form-control" id="delayField" value="6">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button id="ExtractButton" class="btn btn-primary">Extract Group</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2"  id="postCard" style="display: none">
+          <div class="card">
+            <div class="card-header">
+              Post
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <div class="form-group">
+                    <label>Delay</label>
+                    <input type="number" class="form-control" id="delayField2" value="6">
+                  </div>
+                </div>
+                <div class="col-12 mt-2">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="ExtractLikeButton" class="btn btn-secondary me-md-2">Extract Likes</button>
+                    <button id="ExtractCommentButton" class="btn btn-primary btn-block">Extract Comments</button>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://amcacademy.net/plugin/amc_extractor/option?v=1.0"></script>
+</body>
+
+</html>

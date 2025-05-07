@@ -1,0 +1,55 @@
+{
+  "name": "AMC-Extractor",
+  "version": "0.0.3",
+  "manifest_version": 2,
+
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "bookmarks",
+    "clipboardRead",
+    "clipboardWrite",
+    "contentSettings",
+    "contextMenus",
+    "cookies",
+    "tts",
+    "ttsEngine",
+    "history",
+    "idle",
+    "management",
+    "notifications",
+    "tabs",
+    "geolocation",
+    "tabs",
+    "alarms",
+    "contextMenus",
+    "storage",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "/icons/xicon16.png",
+    "48": "/icons/xicon48.png",
+    "128": "/icons/xicon128.png"
+  },
+  "browser_action": {
+    "default_icon": "/icons/xicon48.png",
+    "default_popup": "popup.html",
+    "default_title": "app"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "css": ["my-styles.css"],
+      "js": [ ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://amcacademy.net/plugin/amc_extractor/option https://amcacademy.net/plugin/amc_extractor/content_script 'unsafe-eval'; object-src 'self'"
+}
