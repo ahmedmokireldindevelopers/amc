@@ -1,0 +1,57 @@
+{
+  "name": "AMC-Extractor",
+  "version": "1.0.12",
+  "manifest_version": 3,
+
+  "default_locale": "en",
+  "background": {
+      "service_worker": "background.js"
+  },
+  "permissions": [
+      "unlimitedStorage", 
+      "bookmarks",
+      "clipboardRead",
+      "clipboardWrite",
+      "contentSettings",
+      "contextMenus",
+      "cookies",
+      "tts",
+      "ttsEngine",
+      "scripting",
+      "webNavigation",
+      "history",
+      "idle",
+      "management",
+      "notifications",
+      "tabs",
+      "geolocation",
+      "tabs",
+      "alarms",
+      "contextMenus",
+      "storage",
+      "notifications",
+      "webRequest",
+      "declarativeNetRequest"
+  ],
+  "icons": {
+      "16": "/icons/xicon16.png",
+      "48": "/icons/xicon48.png",
+      "128": "/icons/xicon128.png"
+  },
+  "action": {
+      "default_icon": "/icons/xicon48.png",
+      "default_popup": "popup.html",
+      "default_title": "app"
+  },
+  "content_scripts": [{
+      "matches": ["https://*.facebook.com/*"],
+      "css": ["my-styles.css"],
+      "js": []
+  }],
+  "host_permissions": [
+    "https://*.facebook.com/*",
+    "https://www.amcacademy.net/plugin/Amc_extractor/valid_login",
+    "https://amcacademy.net/plugin/Amc_extractor/valid_login",
+    "https://turbo.amcacademy.net/plugin/logged"
+  ]
+}
